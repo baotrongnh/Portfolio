@@ -1,0 +1,29 @@
+@import 'container.scss';
+@import 'reset.scss';
+@import 'variables.scss';
+
+* {
+     box-sizing: border-box;
+}
+
+html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+}
+
+body {
+     font-family: "Segoe UI", Arial, sans-serif;
+     font-size: 1.6rem;
+     text-rendering: optimizeSpeed;
+}
+
+.App {
+     background-color: #fff;
+     color: $text-primary;
+}
+
+input:-webkit-autofill {
+     background-color: transparent;
+     -webkit-box-shadow: 0 0 0px 1000px white inset;
+     box-shadow: 0 0 0px 1000px white inset;
+}

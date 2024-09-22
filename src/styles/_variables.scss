@@ -1,0 +1,54 @@
+.App {
+     &.light-theme {
+          --text-primary: #333333;
+          --theme-color-primary: #7ed4fc;
+          --theme-color-secondary: #3c83f6;
+          --bg-primary: #faf8fc;
+          --bg-secondary: #EEEEEE;
+          --accent-primary: #fb923c;
+          --border: #817d7d34;
+     }
+
+     &.dark-theme {
+          --text-primary: #cccccc;
+          --theme-color-primary: #035981;
+          --theme-color-secondary: #0950c3;
+          --bg-primary: #050307;
+          --bg-secondary: #EEEEEE;
+          --accent-primary: #fb923c;
+          --border: #fff;
+     }
+}
+
+$text-primary: var(--text-primary);
+$theme-color-primary: var(--theme-color-primary);
+$theme-color-secondary: var(--theme-color-secondary);
+$bg-primary: var(--bg-primary);
+$bg-secondary: var(--bg-secondary);
+$accent-primary: var(--accent-primary);
+$border: var(--border);
+
+//$text-secondary:
+//$text-muted:
+//$text-light:
+//$text-dark
+//$text-error
+
+//$border-primary
+//$border-decondary
+//$border-light
+//$border-dark
+//$border-muted
+
+//$accent-secondary
+//$accent-hover
+//$accent-active
+//$highlight
+
+// $text-color: var(--text-color);
+// $text-muted-color: grey;
+// $error-color: red;
+// $success-color: green;
+// $warning-color: yellow;
+// $active-color: grey;
+// $hover-color: grey;

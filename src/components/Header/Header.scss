@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.header {
+     height: 70px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: sticky;
+     top: 0;
+
+     .logo-block {
+          width: 200px;
+
+          .logo-name {
+               text-decoration: none;
+               color: $text-primary;
+               font-size: 3rem;
+               font-weight: 800;
+          }
+     }
+
+     .navbar-block {
+          display: flex;
+          gap: 60px;
+
+          .navbar-item-link {
+               text-decoration: none;
+               color: $text-primary;
+               font-size: 1.8rem;
+
+               .navbar-item {}
+          }
+     }
+
+     .btn-block {
+          width: 200px;
+     }
+}

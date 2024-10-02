@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-     const [theme, setTheme] = useState('light-theme');
+     const [theme, setTheme] = useState('dark-theme');
 
      return (
           <AppContext.Provider

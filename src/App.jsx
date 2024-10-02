@@ -13,7 +13,7 @@ function App() {
         <Routes>
           {publicRoutes.map((route, index) => {
             const Page = route.element;
-            const Layout = route.layout == null ? Fragment : (route.layout || DefaultLayout);
+            const Layout = route.layout === null ? Fragment : (route.layout || DefaultLayout);
             return (
               <Route key={index} path={route.path} element={<Layout><Page /></Layout>} />
             )

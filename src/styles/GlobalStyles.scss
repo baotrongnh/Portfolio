@@ -1,6 +1,7 @@
 @import 'container.scss';
 @import 'reset.scss';
 @import 'variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 * {
      box-sizing: border-box;
@@ -9,10 +10,12 @@
 html {
      font-size: 62.5%;
      overflow-x: hidden;
+     height: 3000px;
 }
 
 body {
-     font-family: "Segoe UI", Arial, sans-serif;
+     // font-family: "Segoe UI", Arial, sans-serif;
+     font-family: "DM Sans", sans-serif;
      font-size: 1.6rem;
      text-rendering: optimizeSpeed;
 }

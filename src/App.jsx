@@ -4,8 +4,12 @@ import { publicRoutes } from './routes';
 import { Fragment, useContext } from 'react';
 import DefaultLayout from './layouts/DefaultLayout';
 import { AppContext } from './contexts/AppContext';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
+
 function App() {
-  const {theme} = useContext(AppContext);
+  const { theme } = useContext(AppContext);
+  Aos.init({duration: 700});
 
   return (
     <div className={clsx('App', theme)}>

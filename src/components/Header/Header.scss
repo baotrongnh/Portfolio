@@ -7,6 +7,8 @@
      align-items: center;
      position: sticky;
      top: 0;
+     padding: 0 20px;
+     z-index: 10;
 
      .logo-block {
           width: 200px;
@@ -16,6 +18,10 @@
                color: $text-primary;
                font-size: 3rem;
                font-weight: 800;
+
+               span {
+                    
+               }
           }
      }
 
@@ -34,5 +40,7 @@
 
      .btn-block {
           width: 200px;
+          display: flex;
+          justify-content: flex-end;
      }
 }

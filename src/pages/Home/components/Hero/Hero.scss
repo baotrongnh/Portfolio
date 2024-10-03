@@ -1,0 +1,47 @@
+.hero {
+     height: calc(100vh - 70px);
+     padding-bottom: 70px;
+     // background-image: $bg-animation;
+     background-size: cover;
+     background-position: center;
+
+     .container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 50px;
+
+          .img-block {
+               .img {
+                    width: 100%;
+                    max-width: 300px;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    object-position: right;
+                    border-radius: 50%;
+
+                    &:hover {
+
+                    }
+               }
+
+               .ant-image-mask {
+                    border-radius: 50%;
+               }
+          }
+
+
+          .text-typing {
+               font-weight: 600;
+               font-size: 5.5rem;
+          }
+
+          .description {
+               font-size: 2.1rem;
+               font-weight: 300;
+          }
+
+     }
+}

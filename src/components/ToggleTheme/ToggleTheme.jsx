@@ -15,112 +15,92 @@ const ToggleTheme = () => {
 
      return (
           <StyledWrapper>
-               <div className="checkbox-wrapper-5">
-                    <div className="check">
-                         <input checked={theme === 'light-theme'} id="check-5" type="checkbox" onChange={e => handleTheme(e)} />
-                         <label htmlFor="check-5" />
-                    </div>
-               </div>
+               <label className="switch">
+                    <input checked={theme === 'light-theme'} onChange={handleTheme} type="checkbox" />
+                    <span className="slider" />
+               </label>
           </StyledWrapper>
      );
 };
 
 const StyledWrapper = styled.div`
-  .checkbox-wrapper-5 .check {
-  --size: 30px;
+  /* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
   position: relative;
-  background: linear-gradient(90deg, #f19af3, #f099b5);
-  line-height: 0;
-  perspective: 400px;
-  font-size: var(--size);
-}
-
-.checkbox-wrapper-5 .check input[type="checkbox"],
-  .checkbox-wrapper-5 .check label,
-  .checkbox-wrapper-5 .check label::before,
-  .checkbox-wrapper-5 .check label::after,
-  .checkbox-wrapper-5 .check {
-  appearance: none;
   display: inline-block;
-  border-radius: var(--size);
-  border: 0;
-  transition: .35s ease-in-out;
-  box-sizing: border-box;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #223243;
+  transition: .4s;
+  border-radius: 30px;
 }
 
-.checkbox-wrapper-5 .check label {
-  width: calc(2.2 * var(--size));
-  height: var(--size);
-  background: #d7d7d7;
-  overflow: hidden;
-}
-
-.checkbox-wrapper-5 .check input[type="checkbox"] {
+.slider:before {
   position: absolute;
-  z-index: 1;
-  width: calc(.8 * var(--size));
-  height: calc(.8 * var(--size));
-  top: calc(.1 * var(--size));
-  left: calc(.1 * var(--size));
-  background: linear-gradient(45deg, #dedede, #ffffff);
-  box-shadow: 0 6px 7px rgba(0,0,0,0.3);
-  outline: none;
-  margin: 0;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: #223243;
+  box-shadow: inset 2px -2px 0 1.8px #fff;
+  transition: .4s;
+  animation: anima1 0.3s linear;
 }
 
-.checkbox-wrapper-5 .check input[type="checkbox"]:checked {
-  left: calc(1.3 * var(--size));
+@keyframes anima1 {
+  0% {
+    transform: translateX(1.5em);
+  }
+
+  80% {
+    transform: translateX(-0.3em);
+  }
+
+  100% {
+    transform: translateX(0em);
+  }
 }
 
-.checkbox-wrapper-5 .check input[type="checkbox"]:checked + label {
-  background: transparent;
+.switch input:checked + .slider:before {
+  background-color: yellow;
+  box-shadow: none;
+  transform: translateX(1.5em);
+  animation: anima 0.3s linear;
 }
 
-.checkbox-wrapper-5 .check label::before,
-  .checkbox-wrapper-5 .check label::after {
-  content: "· ·";
-  position: absolute;
-  overflow: hidden;
-  left: calc(.15 * var(--size));
-  top: calc(.5 * var(--size));
-  height: var(--size);
-  letter-spacing: calc(-0.04 * var(--size));
-  color: #9b9b9b;
-  font-family: "Times New Roman", serif;
-  z-index: 2;
-  font-size: calc(.6 * var(--size));
-  border-radius: 0;
-  transform-origin: 0 0 calc(-0.5 * var(--size));
-  backface-visibility: hidden;
-}
+@keyframes anima {
+  0% {
+    transform: translateX(0px)
+  }
 
-.checkbox-wrapper-5 .check label::after {
-  content: "●";
-  top: calc(.65 * var(--size));
-  left: calc(.2 * var(--size));
-  height: calc(.1 * var(--size));
-  width: calc(.35 * var(--size));
-  font-size: calc(.2 * var(--size));
-  transform-origin: 0 0 calc(-0.4 * var(--size));
-}
+  80% {
+    transform: translateX(1.6em)
+  }
 
-.checkbox-wrapper-5 .check input[type="checkbox"]:checked + label::before,
-  .checkbox-wrapper-5 .check input[type="checkbox"]:checked + label::after {
-  left: calc(1.55 * var(--size));
-  top: calc(.4 * var(--size));
-  line-height: calc(.1 * var(--size));
-  transform: rotateY(360deg);
+  100% {
+    transform: translateX(1.4em)
+  }
 }
-
-.checkbox-wrapper-5 .check input[type="checkbox"]:checked + label::after {
-  height: calc(.16 * var(--size));
-  top: calc(.55 * var(--size));
-  left: calc(1.6 * var(--size));
-  font-size: calc(.6 * var(--size));
-  line-height: 0;
-}
-
 `;
 
 export default ToggleTheme;

@@ -22,11 +22,11 @@ function Header() {
      return (
           <header className="header">
                <div className='logo-block'>
-                    <Link to='/' className='logo-name'>&lt;Nhbt/&gt;</Link>
+                    <Link to='/' className='logo-name'>&lt;<span>nhbt</span> /&gt;</Link>
                </div>
 
                <ul className="navbar-block">
-                    <Link className='navbar-item-link'>
+                    <Link to='/#home' className='navbar-item-link'>
                          <li className='navbar-item'>Home</li>
                     </Link>
 

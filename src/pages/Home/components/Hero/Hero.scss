@@ -5,6 +5,14 @@
      background-size: cover;
      background-position: center;
 
+     &.light-theme {
+          background-image: url(../../../../assets/photo/background-light-theme.svg);
+     }
+
+     &.dark-theme {
+          background-image: url(../../../../assets/photo/background-dark-theme.svg);
+     }
+
      .container {
           height: 100%;
           display: flex;

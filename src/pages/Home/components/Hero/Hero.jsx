@@ -2,8 +2,6 @@ import { Image } from 'antd';
 import './Hero.scss';
 import { TypeAnimation } from 'react-type-animation';
 import { photoProfile2 } from '../../../../assets/photo';
-import svgBgDark from '../../../../assets/photo/background-dark-theme.svg';
-import svgBgLight from '../../../../assets/photo/background-light-theme.svg';
 import { useContext } from 'react';
 import { AppContext } from '../../../../contexts/AppContext';
 
@@ -11,7 +9,7 @@ function Hero() {
      const { theme } = useContext(AppContext);
 
      return (
-          <div className="hero" style={{ backgroundImage: `url(${theme === 'dark-theme' ? svgBgDark : svgBgLight})` }}>
+          <div className={`hero ${theme}`}>
                <div className="container" data-aos="fade-up">
                     <div className="img-block">
                          <Image

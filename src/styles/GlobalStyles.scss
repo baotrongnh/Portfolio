@@ -9,8 +9,10 @@
 
 html {
      font-size: 62.5%;
+     // height: 3000px;
+     scroll-behavior: smooth;
+     width: 100vw;
      overflow-x: hidden;
-     height: 3000px;
 }
 
 body {
@@ -18,6 +20,7 @@ body {
      font-family: "DM Sans", sans-serif;
      font-size: 1.6rem;
      text-rendering: optimizeSpeed;
+     overflow-x: hidden;
 }
 
 .App {
@@ -29,4 +32,25 @@ input:-webkit-autofill {
      background-color: transparent;
      -webkit-box-shadow: 0 0 0px 1000px white inset;
      box-shadow: 0 0 0px 1000px white inset;
+}
+
+::-webkit-scrollbar {
+     width: 8px;
+     height: 8px;
+}
+
+::-webkit-scrollbar-track {
+     background: #f0f0f0;
+     border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+     background-color: #888;
+     border-radius: 10px;
+     border: 2px solid transparent;
+     background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+     background-color: #555;
 }

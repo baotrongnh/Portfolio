@@ -1,22 +1,27 @@
-import { ToggleTheme } from '..';
-import './Header.scss';
+import { Button } from 'antd';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { DrawerMobile, ToggleTheme } from '..';
+import { AppContext } from '../../contexts/AppContext';
+import './Header.scss';
+import { Icon } from '@iconify/react';
 
 function Header() {
-     // const [header, setHeader] = useState(false);
+     const [headerColor, setHeaderColor] = useState(false);
+     const { setIsDrawer } = useContext(AppContext);
 
-     // useEffect(() => {
-     //      const changeHeader = () => {
-     //           if (window.scrollY > 703) {
-     //                console.log(window.scrollY)
-     //                setHeader(true);
-     //           } else {
-     //                setHeader(false);
-     //           }
-     //      }
+     useEffect(() => {
+          const changeHeader = () => {
+               if (window.scrollY > 703) {
+                    // console.log(window.scrollY)
+                    setHeaderColor(true);
+               } else {
+                    setHeaderColor(false);
+               }
+          }
 
-     //      window.addEventListener('scroll', changeHeader);
-     // }, []);
+          window.addEventListener('scroll', changeHeader);
+     }, []);
 
 
      return (
@@ -26,13 +31,13 @@ function Header() {
                </div>
 
                <ul className="navbar-block">
-                    <Link to='/#home' className='navbar-item-link'>
+                    <a href='/#home' className='navbar-item-link'>
                          <li className='navbar-item'>Home</li>
-                    </Link>
+                    </a>
 
-                    <Link className='navbar-item-link'>
+                    <a href='/#about' className='navbar-item-link'>
                          <li className='navbar-item'>About me</li>
-                    </Link>
+                    </a>
 
                     <Link className='navbar-item-link'>
                          <li className='navbar-item'>My project</li>
@@ -46,7 +51,18 @@ function Header() {
                <div className="btn-block">
                     <ToggleTheme />
                </div>
+
+               <div className="navbar-mobile">
+                    <Button className='btn-menu' onClick={() => setIsDrawer(true)}>
+                         <Icon className='icon' icon="mingcute:menu-fill" />
+                    </Button>
+
+               </div>
+
+               <DrawerMobile />
           </header>
+
+
      );
 }
 

@@ -2,16 +2,17 @@
 
 .header {
      height: 70px;
+     width: 100%;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     position: sticky;
+     position: fixed;
      top: 0;
-     padding: 0 20px;
+     padding: 0 40px;
      z-index: 10;
 
      .logo-block {
-          width: 200px;
+          width: 125px;
 
           .logo-name {
                text-decoration: none;
@@ -19,28 +20,52 @@
                font-size: 3rem;
                font-weight: 800;
 
-               span {
-                    
-               }
+               span {}
           }
      }
 
      .navbar-block {
           display: flex;
-          gap: 60px;
+          gap: 40px;
 
           .navbar-item-link {
                text-decoration: none;
                color: $text-primary;
                font-size: 1.8rem;
+               padding: 10px 15px;
+               border-radius: 10px;
+               transition: 0.15s;
+
+               &:hover {
+                    background-color: rgba(178, 178, 178, 0.148);
+               }
 
                .navbar-item {}
           }
      }
 
      .btn-block {
-          width: 200px;
+          width: 125px;
           display: flex;
           justify-content: flex-end;
+     }
+
+     .navbar-mobile {
+          display: none;
+
+          
+     }
+
+     @media screen and (max-width: 869px) {
+          justify-content: space-between;
+
+          .navbar-block,
+          .btn-block {
+               display: none;
+          }
+
+          .navbar-mobile {
+               display: inline-block;
+          }
      }
 }

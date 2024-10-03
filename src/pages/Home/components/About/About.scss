@@ -1,0 +1,71 @@
+@import '../../../../styles/variables';
+
+.about {
+     padding: 150px 0;
+
+     .content-info {
+          background-color: $bg-primary;
+
+          .img-block {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin-bottom: 20px;
+               padding: 0 30px;
+               .img {
+                    width: 100%;
+                    border-radius: 4px;
+               }
+          }
+
+          .text-block {
+               display: flex;
+               flex-direction: column;
+               justify-content: flex-start;
+               padding: 0 30px;
+
+               .title-block {
+
+                    .who-text {
+                         font-size: 2.5rem;
+                         font-weight: 600;
+                    }
+
+                    .title {
+                         font-size: 4rem;
+                         font-weight: 700;
+                         margin: 20px 0;
+                    }
+
+                    .sub-title {
+                         font-weight: 300;
+                         font-size: 2rem;
+                         text-align: justify;
+                         line-height: 1.5;
+                         opacity: 90%;
+                    }
+               }
+
+               .infor-block {
+                    margin-top: 20px;
+
+                    .infor-item {
+                         font-weight: 300;
+                         line-height: 1.5;
+
+                         span {
+                              font-weight: 600;
+                         }
+                    }
+
+                    .button-block {
+                         margin-top: 38px;
+                    }
+               }
+          }
+     }
+
+     @media screen and (max-width: 576px) {
+          padding: 20px;
+     }
+}

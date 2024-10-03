@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.navbar-mobile {
+
+     .navbar-block {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+
+          .navbar-item-link {
+               text-decoration: none;
+               color: $text-primary;
+               font-size: 1.8rem;
+               padding: 10px 15px;
+               border-radius: 10px;
+               transition: 0.15s;
+
+               &:hover {
+                    opacity: 80%;
+               }
+
+               .navbar-item {}
+          }
+     }
+
+     .btn-block {
+         margin-bottom: 30px;
+         display: flex;
+         justify-content: flex-end;
+     }
+}

@@ -5,12 +5,15 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
      const [theme, setTheme] = useState('dark-theme');
+     const [isDrawer, setIsDrawer] = useState(false);
 
      return (
           <AppContext.Provider
                value={{
                     theme,
-                    setTheme
+                    setTheme,
+                    isDrawer,
+                    setIsDrawer
                }}
           >
                {children}

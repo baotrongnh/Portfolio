@@ -12,6 +12,7 @@
                justify-content: center;
                margin-bottom: 20px;
                padding: 0 30px;
+
                .img {
                     width: 100%;
                     border-radius: 4px;
@@ -65,7 +66,7 @@
           }
      }
 
-     @media screen and (max-width: 576px) {
+     @media screen and (max-width: 700px) {
           padding: 20px;
      }
 }

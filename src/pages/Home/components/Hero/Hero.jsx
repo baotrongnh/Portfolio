@@ -30,6 +30,7 @@ function Hero() {
                          style={{ display: 'inline-block' }}
                          repeat={Infinity}
                          className='text-typing'
+                         
                     />
 
                     <p className='description'>&quot;Coding Harmony, Living Simply.&quot;</p>

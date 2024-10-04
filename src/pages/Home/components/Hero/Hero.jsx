@@ -9,7 +9,7 @@ function Hero() {
      const { theme } = useContext(AppContext);
 
      return (
-          <div id='home' className={`hero ${theme}`}>
+          <section id='home' className={`hero ${theme}`}>
                <div className="container" data-aos="fade-up">
                     <div className="img-block">
                          <Image
@@ -20,22 +20,23 @@ function Hero() {
 
                     <TypeAnimation
                          sequence={[
-                              "Hi There!", 1000,
-                              "I'm Bao Trong", 2000,
-                              "I'm a Frontend Developer", 2000,
-                              "I'm a Photographer", 2000
+                              "Hi There!", 2000,
+                              "I'm Bao Trong", 2500,
+                              "I'm a Frontend Developer", 2500,
+                              "I'm a Photographer", 2500,
+                              "I'm Bao Trong", 2000
                          ]}
                          wrapper="span"
                          speed={20}
                          style={{ display: 'inline-block' }}
-                         repeat={Infinity}
+                         repeat={false}
                          className='text-typing'
                          
                     />
 
                     <p className='description'>&quot;Coding Harmony, Living Simply.&quot;</p>
                </div>
-          </div>
+          </section>
      );
 }
 

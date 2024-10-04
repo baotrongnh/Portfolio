@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
                value={{
                     theme,
                     setTheme,
-                    isDrawer,
+                    isDrawer, 
                     setIsDrawer
                }}
           >

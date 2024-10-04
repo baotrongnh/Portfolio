@@ -6,8 +6,9 @@
           --theme-color-secondary: #3c83f6;
           --bg-primary: #faf8fc;
           --bg-secondary: #EEEEEE;
-          --accent-primary: #fb923c;
+          --accent-primary: #7a38fe;
           --border: #817d7d34;
+          --header-bg: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.027));
      }
 
      &.dark-theme {
@@ -16,8 +17,9 @@
           --theme-color-secondary: #0950c3;
           --bg-primary: #131313;
           --bg-secondary: #65656572;
-          --accent-primary: #fb923c;
+          --accent-primary: #7a38fe;
           --border: #fff;
+          --header-bg: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.027));
      }
 }
 
@@ -28,6 +30,7 @@ $bg-primary: var(--bg-primary);
 $bg-secondary: var(--bg-secondary);
 $accent-primary: var(--accent-primary);
 $border: var(--border);
+$header-bg: var(--header-bg);
 
 //$text-secondary:
 //$text-muted:

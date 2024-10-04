@@ -1,6 +1,5 @@
 .hero {
      height: calc(100vh);
-     padding: 70px 0;
      background-size: cover;
      background-position: center;
      overflow-y: hidden;
@@ -14,7 +13,7 @@
      }
 
      .container {
-          height: 100%;
+          height: 100vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -53,6 +52,10 @@
           }
      }
 
-     @media screen and (max-width: 768px) {
+     @media screen and (max-width: 390px) {
+
+          .text-typing {
+               font-size: 4rem;
+          }
      }
 }

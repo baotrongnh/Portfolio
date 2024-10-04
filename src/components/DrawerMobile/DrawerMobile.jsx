@@ -23,11 +23,11 @@ function DrawerMobile() {
                     </div>
 
                     <ul className="navbar-block">
-                         <a href='/#home' className='navbar-item-link'>
+                         <a onClick={() => setIsDrawer(false)} href='/#home' className='navbar-item-link'>
                               <li className='navbar-item'>Home</li>
                          </a>
      
-                         <a href='/#about' className='navbar-item-link'>
+                         <a onClick={() => setIsDrawer(false)} href='/#about' className='navbar-item-link'>
                               <li className='navbar-item'>About me</li>
                          </a>
      

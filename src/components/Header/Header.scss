@@ -12,6 +12,10 @@
      padding: 0 40px;
      z-index: 10;
 
+     &.scroll-change {
+          background: $header-bg;
+     }
+
      .logo-block {
           width: 125px;
 
@@ -35,10 +39,27 @@
                font-size: 1.8rem;
                padding: 10px 15px;
                border-radius: 10px;
-               transition: 0.15s;
+               transition: 0.3s;
+               position: relative;
 
                &:hover {
-                    background-color: rgba(178, 178, 178, 0.148);
+                    background-color: rgba(178, 178, 178, 0.055);
+               }
+
+               &.active {
+                    color: $accent-primary;
+                    font-weight: 500;
+
+                    &::after {
+                         content: '';
+                         position: absolute;
+                         border-radius: 30px;
+                         left: 15%;
+                         bottom: 0;
+                         width: 70%;
+                         height: 2px;
+                         background-color: $accent-primary;
+                    }
                }
 
                .navbar-item {}
@@ -54,11 +75,12 @@
      .navbar-mobile {
           display: none;
 
-          
+
      }
 
      @media screen and (max-width: 869px) {
           justify-content: space-between;
+          padding: 0 20px;
 
           .navbar-block,
           .btn-block {

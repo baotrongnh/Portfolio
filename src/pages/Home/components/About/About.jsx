@@ -6,17 +6,17 @@ import './About.scss';
 function About() {
 
      return (
-          <div className="about" id="about">
+          <section className="about" id="about">
                <div className="container">
                     <Row className="content-info">
-                         <Col xs={24} sm={24} md={24} lg={11} xl={13} className='img-block'>
+                         <Col data-aos="fade-up-right" xs={24} sm={24} md={24} lg={11} xl={13} className='img-block'>
                               <Image className='img' src={photoProfile2} alt="" />
                          </Col>
 
-                         <Col xs={24} sm={24} md={24} lg={13} xl={11} className='text-block'>
-                              <div className='title-block' >
+                         <Col data-aos="fade-up-left" xs={24} sm={24} md={24} lg={13} xl={11} className='text-block'>
+                              <div className='title-block'>
                                    <p className='who-text'>Who am i?</p>
-                                   <h1 className='title'>I&apos;m Bao Trong, a Front-end Developer</h1>
+                                   <h1 className='title'>I&apos;m Bao Trong <br /> a Front-end Developer</h1>
                                    <p className='sub-title'>&quot;I use code to develop the parts of websites and apps that people, products and interact with. Fonts and colours. Forms and buttons. That&apos; me.&quot;</p>
                               </div>
                               <Row className='infor-block'>
@@ -39,7 +39,7 @@ function About() {
                          </Col>
                     </Row>
                </div>
-          </div>
+          </section>
      );
 }
 

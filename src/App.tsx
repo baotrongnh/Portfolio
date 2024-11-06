@@ -4,8 +4,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import DefaultLayout from "./layouts/DefaultLayout.tsx"
 import { AllProjects, Portfolio } from "./pages"
 import { theme } from "./theme.ts"
+import 'aos/dist/aos.css'
+import AOS from 'aos'
 
 function App() {
+    AOS.init({
+        duration: 800
+    })
 
     return (
         <MantineProvider theme={theme} defaultColorScheme='dark'>

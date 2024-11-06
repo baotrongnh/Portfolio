@@ -1,5 +1,3 @@
-@import 'reset';
-@import 'variables';
 
 * {
   box-sizing: border-box;
@@ -11,20 +9,15 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
 }
 
-.App {
-  background-color: $bg-primary;
-  color: $text-primary;
-}
 
 input:-webkit-autofill {
   background-color: transparent;
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  box-shadow: 0 0 0 1000px white inset;
 }
 
 ::-webkit-scrollbar {
@@ -33,8 +26,8 @@ input:-webkit-autofill {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 10px;
+  background: #4b4b4b;
+  // border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {

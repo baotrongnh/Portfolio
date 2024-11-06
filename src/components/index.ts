@@ -1,3 +1,4 @@
-import Header from "./Header/Header.js"
+import Header from "./Header.js"
 
-export {Header}
+export { Header }
+

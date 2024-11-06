@@ -1,3 +1,4 @@
-import Home from "./Home/Home.tsx"
+import Portfolio from "./Portfolio/Portfolio"
+import AllProjects from "./AllProject/AllProjects"
 
-export {Home}
+export { Portfolio, AllProjects }

@@ -1,37 +1,52 @@
-import { Button, useMantineTheme } from "@mantine/core"
-import { NavLink } from 'react-router-dom'
+import {Burger, Button, Drawer} from "@mantine/core"
+import {NavLink} from 'react-router-dom'
+import {useDisclosure} from "@mantine/hooks";
 
 function Header() {
-    const theme = useMantineTheme()
+    const [opened, {close, toggle}] = useDisclosure(false)
 
     return (
         <header className="w-full h-20 py-3 px-4 fixed top-0 z-20">
-            <div className='container h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-[7px] shadow-sm hover:backdrop-blur-lg'>
+            <div
+                className='container h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-[7px] shadow-sm hover:backdrop-blur-lg'>
                 <div className="">
                     <h2 className=''>{'<nhbt/>'}</h2>
                 </div>
 
-                <div className='hidden md:flex gap-5'>
+                <div className='hidden sm:flex gap-5'>
                     <NavLink
                         to='/'
-                        className={({ isActive }) => isActive ? `text-[${theme.colors.purpleTheme[5]}]` : ''}
+                        className={({isActive}) => isActive ? `text-purple-theme` : ''}
                     >
                         About me
                     </NavLink>
 
                     <NavLink
                         to='/all-projects'
-                        className={({ isActive }) => isActive ? `text-[${theme.colors.purpleTheme[5]}]` : ''}
+                        className={({isActive}) => isActive ? `text-purple-theme` : ''}
                     >
                         Project
                     </NavLink>
                 </div>
 
-                <div className="">
+                <div className="hidden sm:flex gap-5">
                     <Button>Login</Button>
                 </div>
 
+                <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" className='sm:hidden'/>
 
+                <Drawer
+                    opened={opened}
+                    onClose={close}
+                    title="</Menu>"
+                    position='top'
+                    overlayProps={{backgroundOpacity: 0.5, blur: 4}}
+                >
+                    <div className='flex flex-col items-center gap-2'>
+                        <NavLink onClick={toggle} to='/' className={'w-full p-1 rounded-lg text-2xl font-semibold text-center'}>Portfolio</NavLink>
+                        <NavLink onClick={toggle} to='/' className='text-2xl font-semibold'>Portfolio</NavLink>
+                    </div>
+                </Drawer>
             </div>
         </header>
     )

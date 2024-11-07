@@ -1,11 +1,12 @@
 import React from 'react'
-import {Header} from "../components"
+import { Footer, Header } from "../components"
 
-function DefaultLayout({children}: { children: React.ReactNode }) {
+function DefaultLayout({ children }: { children: React.ReactNode }) {
     return (
         <>
             <Header />
             {children}
+            <Footer />
         </>
     )
 }

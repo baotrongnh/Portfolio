@@ -1,6 +1,6 @@
-import {Burger, Button, Drawer} from "@mantine/core"
-import {NavLink} from 'react-router-dom'
-import {useDisclosure} from "@mantine/hooks";
+import { Burger, Button, Drawer } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     const [opened, {close, toggle}] = useDisclosure(false)
@@ -16,14 +16,14 @@ function Header() {
                 <div className='hidden sm:flex gap-5'>
                     <NavLink
                         to='/'
-                        className={({isActive}) => isActive ? `text-purple-theme` : ''}
+                        className={({isActive}) => `${isActive ? `text-purple-theme` : ''} font-semibold`}
                     >
                         About me
                     </NavLink>
 
                     <NavLink
                         to='/all-projects'
-                        className={({isActive}) => isActive ? `text-purple-theme` : ''}
+                        className={({ isActive }) => `${isActive ? `text-purple-theme` : ''} font-semibold`}
                     >
                         Project
                     </NavLink>
@@ -44,7 +44,7 @@ function Header() {
                 >
                     <div className='flex flex-col items-center gap-2'>
                         <NavLink onClick={toggle} to='/' className={'w-full p-1 rounded-lg text-2xl font-semibold text-center'}>Portfolio</NavLink>
-                        <NavLink onClick={toggle} to='/' className='text-2xl font-semibold'>Portfolio</NavLink>
+                        <NavLink onClick={toggle} to='/' className='text-2xl font-semibold'>Resource repository</NavLink>
                     </div>
                 </Drawer>
             </div>

@@ -5,7 +5,7 @@ function Header() {
     const theme = useMantineTheme()
 
     return (
-        <header className="w-full h-20 py-3 px-4 fixed top-0">
+        <header className="w-full h-20 py-3 px-4 fixed top-0 z-20">
             <div className='container h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-[7px] shadow-sm hover:backdrop-blur-lg'>
                 <div className="">
                     <h2 className=''>{'<nhbt/>'}</h2>

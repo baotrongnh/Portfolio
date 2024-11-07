@@ -8,12 +8,12 @@ export default {
     extend: {},
     container: {
       center: true,
-      screens: {
-        sm: '36em',
-        md: '48em',
-        lg: '62em',
-        xl: '75em',
-      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px'
     }
   },
   plugins: [],

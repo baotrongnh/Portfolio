@@ -1,5 +1,5 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { Button } from "@mantine/core";
+import { Icon } from "@iconify/react/dist/iconify.js"
+import { Button } from "@mantine/core"
 
 export default function Hero() {
 

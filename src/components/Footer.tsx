@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Text } from '@mantine/core'
-import React from 'react'
 
 export default function Footer() {
      return (

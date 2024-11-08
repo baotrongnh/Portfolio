@@ -16,7 +16,7 @@ function Header() {
                 <div className='hidden sm:flex gap-5'>
                     <NavLink
                         to='/'
-                        className={({isActive}) => `${isActive ? `text-purple-theme` : ''} font-semibold`}
+                        className={({isActive}) => `${isActive ? `text-purple-500` : ''} font-semibold`}
                     >
                         About me
                     </NavLink>

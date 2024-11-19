@@ -1,6 +1,7 @@
-import { Burger, Button, Drawer } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { NavLink } from 'react-router-dom';
+import {Burger, Button, Drawer} from "@mantine/core";
+import {useDisclosure} from "@mantine/hooks";
+import {NavLink} from 'react-router-dom';
+import {Icon} from "@iconify/react/dist/iconify.js";
 
 function Header() {
     const [opened, {close, toggle}] = useDisclosure(false)
@@ -10,7 +11,7 @@ function Header() {
             <div
                 className='container h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-[7px] shadow-sm hover:backdrop-blur-lg'>
                 <div className="">
-                    <h2 className=''>{'<nhbt/>'}</h2>
+                    <Icon fontSize={34} className='text-purple-500' icon="material-symbols:code-blocks" />
                 </div>
 
                 <div className='hidden sm:flex gap-5'>
@@ -23,7 +24,7 @@ function Header() {
 
                     <NavLink
                         to='/all-projects'
-                        className={({ isActive }) => `${isActive ? `text-purple-theme` : ''} font-semibold`}
+                        className={({ isActive }) => `${isActive ? `text-purple-500` : ''} font-semibold`}
                     >
                         Project
                     </NavLink>

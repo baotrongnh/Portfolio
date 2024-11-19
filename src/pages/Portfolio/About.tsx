@@ -1,5 +1,6 @@
 import {Button, Image, Text, useMantineTheme} from '@mantine/core'
 import avatar2 from './../../assets/photo/avatar-2.jpg'
+import {Icon} from "@iconify/react/dist/iconify.js";
 
 export default function About() {
     const theme = useMantineTheme()
@@ -41,7 +42,7 @@ export default function About() {
                             </Text>
 
                             <div className='mt-5'>
-                                <Button>
+                                <Button leftSection={<Icon fontSize={16} icon="material-symbols:download" />}>
                                     Download CV
                                 </Button>
                             </div>

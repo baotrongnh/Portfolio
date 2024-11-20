@@ -38,14 +38,14 @@ const projectData: Project[] = [
         projectLink: 'https://nhbt.vercel.app',
         technology: ['ReactJS', 'Tailwind CSS', 'Mantine UI', 'i18n']
     },
-
 ]
 
 function Projects() {
     return (
         <div className='py-20'>
-            <div className="container px-6 grid grid-cols-1 lg:grid-cols-3 gap-14">
-                {projectData.map((project: Project) => (
+            <h1 className='text-center font-semibold text-base' data-aos="zoom-in-up">Top project</h1>
+            <div className="container px-6 grid grid-cols-1 lg:grid-cols-3 gap-14 mt-7">
+            {projectData.map((project: Project) => (
                     <Card key={project.id} shadow="md" padding="lg" radius="md" data-aos="zoom-in">
                         <Card.Section component="a" href={project.projectLink} target='_blank'>
                             <Image

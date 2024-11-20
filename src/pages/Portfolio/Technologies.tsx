@@ -59,18 +59,24 @@ function Technologies() {
     ]
 
     return (
-        <div className='container'>
-            <h1 className='text-center font-semibold text-base' data-aos="zoom-in-up">Some technologies I've worked with</h1>
-            <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-7'>
-                {technologiesData.map((technology, index) => (
-                    <div key={index} className='flex justify-center mb-7' data-aos="zoom-in-up">
-                        <Tooltip label={technology.name}>
-                            <Icon className='lg:grayscale hover:grayscale-0 duration-500 text-7xl cursor-pointer'
-                                  icon={technology.icon}
-                            />
-                        </Tooltip>
-                    </div>
-                ))}
+        <div className='bg-zinc-900'>
+            <div className='container py-32'>
+                <h1 className='text-center font-semibold text-base' data-aos="zoom-in-up">Some technologies I've worked
+                    with</h1>
+                <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-7'>
+                    {technologiesData.map((technology, index) => (
+                        <div key={index} className='flex flex-col justify-center items-center mb-7'
+                             data-aos="zoom-in-up">
+                            <Tooltip label={technology.name} openDelay={400}>
+                                <Icon
+                                    className='lg:grayscale hover:grayscale-0 hover:scale-105 duration-500 text-7xl cursor-pointer'
+                                    icon={technology.icon}
+                                />
+                            </Tooltip>
+                            <p className='mt-2'>{technology.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )

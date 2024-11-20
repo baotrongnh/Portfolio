@@ -7,7 +7,7 @@ export default function About() {
     const theme = useMantineTheme()
 
     return (
-        <div className="py-20">
+        <div className="py-40">
             <div className='container' data-aos="fade-up">
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 lg:col-span-6 px-7'>

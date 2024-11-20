@@ -1,7 +1,7 @@
-import {Burger, Button, Drawer} from "@mantine/core";
-import {useDisclosure} from "@mantine/hooks";
-import {NavLink} from 'react-router-dom';
-import {Icon} from "@iconify/react/dist/iconify.js";
+import {Burger, Button, Drawer} from "@mantine/core"
+import {useDisclosure} from "@mantine/hooks"
+import {NavLink} from 'react-router-dom'
+import {Icon} from "@iconify/react/dist/iconify.js"
 
 function Header() {
     const [opened, {close, toggle}] = useDisclosure(false)

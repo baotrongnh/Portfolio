@@ -4,6 +4,7 @@ export default {
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
+    darkMode: 'selector',
     theme: {
         extend: {
             colors: {
@@ -30,7 +31,6 @@ export default {
             lg: '1024px',
             xl: '1280px'
         },
-
     },
-    plugins: [],
+    plugins: [require('tailwindcss-motion')],
 }

@@ -23,6 +23,11 @@ input:-webkit-autofill {
   box-shadow: 0 0 0 1000px white inset;
 }
 
+::selection {
+  background-color: #854bcb;
+  color: white;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

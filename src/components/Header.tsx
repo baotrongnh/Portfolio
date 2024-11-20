@@ -39,8 +39,7 @@ function Header() {
                 <Drawer
                     opened={opened}
                     onClose={close}
-                    title="</Menu>"
-                    position='top'
+                    position='bottom'
                     overlayProps={{backgroundOpacity: 0.5, blur: 4}}
                 >
                     <div className='flex flex-col items-center gap-2'>

@@ -2,12 +2,15 @@ import {Button, Image, Text, useMantineTheme} from '@mantine/core'
 import avatar2 from './../../assets/photo/avatar-2.jpg'
 import {Icon} from "@iconify/react/dist/iconify.js"
 import cvPdf from '../../assets/pdf/NguyenHuynhBaoTrong_CV.pdf'
+import {useAppContext} from "../../hooks/contextHook.tsx"
 
 export default function About() {
     const theme = useMantineTheme()
+    const {myInformation} = useAppContext()
+    console.log(myInformation)
 
     return (
-        <div className="py-40 max-h-svh flex items-center">
+        <div className="py-20 sm:py-40 sm:max-h-svh flex items-center">
             <div className='container' data-aos="fade-up">
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 lg:col-span-6 px-7'>

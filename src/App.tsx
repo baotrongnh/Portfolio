@@ -1,15 +1,15 @@
-import { MantineProvider } from '@mantine/core'
+import {MantineProvider} from '@mantine/core'
 import '@mantine/core/styles.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 import DefaultLayout from "./layouts/DefaultLayout.tsx"
-import { AllProjects, Portfolio } from "./pages"
-import { theme } from "./theme.ts"
+import {AllProjects, Portfolio} from "./pages"
+import {theme} from "./theme.ts"
 
 function App() {
     AOS.init({
-        duration: 800
+        duration: 600
     })
 
     return (

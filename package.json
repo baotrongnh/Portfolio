@@ -17,17 +17,14 @@
     "@mantine/modals": "^7.13.4",
     "@types/aos": "^3.0.7",
     "aos": "^3.0.0-beta.6",
-    "matter-js": "^0.20.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
-    "recharts": "^2.13.3",
-    "sass": "^1.80.6"
+    "recharts": "^2.13.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@iconify/react": "^5.0.2",
-    "@types/matter-js": "^0.19.7",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",

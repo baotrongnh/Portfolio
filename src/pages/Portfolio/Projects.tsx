@@ -57,29 +57,31 @@ function Projects() {
                             />
                         </Card.Section>
 
-                        <div className='h-44'>
+                        <div className='min-h-44'>
                             <Text fw='bold' fz='lg' pt='20px'>{project.name}</Text>
                             <Text size="sm" lineClamp={3} className='text-justify'>{project.description}</Text>
-                            <div className='flex flex-wrap items-center gap-3 py-4'>
-                                {project.technology.slice(0, 3).map((technology: string, index: number) => (
+                            <div className='flex flex-wrap items-center gap-4 py-4'>
+                                {project.technology.slice(0, 2).map((technology: string, index: number) => (
                                     <Tooltip label='Technologies' key={index} >
                                         <Badge variant='light'
                                                className='cursor-pointer'>{technology}
                                         </Badge>
                                     </Tooltip>
                                 ))}
-                                {project.technology.length > 3 &&
-                                    <Tooltip label={project.technology.slice(3).join(',  ')} withArrow={true}
-                                             openDelay={400}>
+                                {project.technology.length > 2 &&
+                                    <Tooltip label={project.technology.slice(2).join(',  ')}
+                                             withArrow={true}
+                                             openDelay={400}
+                                    >
                                         <Badge variant='light' className='cursor-pointer'>
-                                            {project.technology.length - 3} +
+                                            {project.technology.length - 2} +
                                         </Badge>
                                     </Tooltip>}
                             </div>
                         </div>
 
-                        <a href={project.projectLink} target='_blank' className='w-full'>
-                            <Button variant="light" mt="md" className='w-full'>
+                        <a href={project.projectLink} target='_blank' className='w-full pt-2'>
+                            <Button variant="light" className='w-full'>
                                 View project
                             </Button>
                         </a>

@@ -10,7 +10,7 @@ export default function About() {
     console.log(myInformation)
 
     return (
-        <div className="py-20 sm:py-40 sm:max-h-svh flex items-center">
+        <div className="bg-zinc-900 py-20 sm:py-40 sm:max-h-svh flex items-center">
             <div className='container' data-aos="fade-up">
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 lg:col-span-6 px-7'>

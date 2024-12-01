@@ -7,7 +7,7 @@ function Header() {
     const [opened, {close, toggle}] = useDisclosure(false)
 
     return (
-        <header className="w-full h-20 py-3 px-4 fixed top-0 z-20">
+        <header className="w-full h-20 py-3 px-4 fixed top-0 z-30">
             <div
                 className='container h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-xl shadow-sm'>
                 <div className="">
@@ -41,6 +41,10 @@ function Header() {
                     onClose={close}
                     position='bottom'
                     overlayProps={{backgroundOpacity: 0.5, blur: 4}}
+                    zIndex={20}
+                    withCloseButton={false}
+                    size='70%'
+                    radius='lg'
                 >
                     <div className='flex flex-col items-center gap-2'>
                         <NavLink onClick={toggle} to='/' className={'w-full p-1 rounded-lg text-2xl font-semibold text-center'}>Portfolio</NavLink>

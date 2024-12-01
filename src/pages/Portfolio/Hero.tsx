@@ -4,7 +4,7 @@ import {Button} from "@mantine/core"
 export default function Hero() {
 
     return (
-        <div className='h-dvh bg-zinc-900'>
+        <div className='h-dvh'>
             <div className='container h-full flex flex-col justify-center text-center'>
                 <p className='text-xl' data-aos="zoom-in-up">
                     Hi, I'm <b className='text-purple-500'>Bao Trong</b>

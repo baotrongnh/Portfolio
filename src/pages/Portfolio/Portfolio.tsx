@@ -8,8 +8,8 @@ export default function Portfolio() {
         <>
             <Hero />
             <About />
-            <Technologies />
             <Projects />
+            <Technologies />
         </>
     )
 }

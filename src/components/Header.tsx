@@ -9,7 +9,7 @@ function Header() {
     return (
         <header className="w-full h-20 py-3 px-4 fixed top-0 z-30">
             <div
-                className='container h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-xl shadow-sm'>
+                className='container motion-preset-focus h-full px-3 flex justify-between items-center border border-gray-600 rounded-lg transition duration-200 backdrop-blur-xl shadow-sm'>
                 <div className="">
                     <Icon fontSize={34} className='text-purple-500' icon="material-symbols:code-blocks" />
                 </div>
